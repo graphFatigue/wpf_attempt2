@@ -1,0 +1,62 @@
+﻿using log4net.Config;
+using log4net;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using wpf_attempt2.API.Implementations;
+using wpf_attempt2.Models.Responses;
+using wpf_attempt2.Models;
+using System.ComponentModel;
+
+namespace wpf_attempt2
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        private BindingList<Asset> _assets = new BindingList<Asset>();
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+            var logger = LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType);
+
+            try
+            {
+                var apiClient = new ApiClient("https://api.coincap.io", 5000);
+
+                var assets = apiClient.Get<AssetsResponse>("v2/assets",
+                                                           urlParams: new Dictionary<string, string> { { "limit", "15" } }).Data;
+                foreach (var asset in assets)
+                {
+                    _assets.Add(asset);
+                }
+                dgAssets.ItemsSource = _assets;
+                dgAssets.IsReadOnly = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+}
