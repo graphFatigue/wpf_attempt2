@@ -1,10 +1,6 @@
-﻿using log4net.Config;
-using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,22 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using wpf_attempt2.API.Implementations;
-using wpf_attempt2.Models.Responses;
 using wpf_attempt2.Models;
-using System.ComponentModel;
 
 namespace wpf_attempt2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для SinglePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SinglePage : Page
     {
-        public MainWindow()
+        public readonly Asset _asset;
+        public SinglePage(Asset asset)
         {
             InitializeComponent();
-            MainFrame.Content = new MainPage();
+            _asset = asset;
         }
     }
 }

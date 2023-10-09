@@ -5,14 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_attempt2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFFAD1D1" Loaded="Grid_Loaded">
-        <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" AutoGenerateColumns="False" x:Name="dgAssets" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="10" Width="550" Height="350">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=Rank}" IsReadOnly="True" Header="Rank" Width="180"/>
-                <DataGridTextColumn Binding="{Binding Path=Name}" IsReadOnly="True" Header="Name" Width="180"/>
-                <DataGridTextColumn Binding="{Binding Path=PriceUsd}" IsReadOnly="True" Header="Price in Usd" Width="180"/>
-            </DataGrid.Columns>
-        </DataGrid>
-    </Grid>
+        Title="MainWindow" Height="500" Width="800">
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
 </Window>

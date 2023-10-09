@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\App.xaml
-2-1940978540
+4805417690
 
-11-1209841922
+131048354655
 196-1776428905
-MainWindow.xaml;Styles\DataGrid.xaml;
+MainPage.xaml;MainWindow.xaml;SinglePage.xaml;Styles\DataGrid.xaml;
 
 False
 
