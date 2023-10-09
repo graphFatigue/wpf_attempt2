@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E6CyZoHFIi082KmiLuc2MYl1UWJz5eeKkHBFwESeoJQQnDkhSIUfCQnUR2jNdqZowWUM4qSRvj6K7JXKuIZ4tA==",
+  "dgSpecHash": "aHz7dH09P2jP9sFtVMyTXinJZzw6vag4dwD2HQNw8DE2fpALrs60drA3V7SrXME2uvSiLBSDA0dfBnGU5unTJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Маша\\source\\repos\\wpf_attempt2\\wpf_attempt2\\wpf_attempt2.csproj",
+  "projectFilePath": "D:\\wpf_attempt3\\wpf_attempt2\\wpf_attempt2\\wpf_attempt2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Маша\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
     "C:\\Users\\Маша\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
