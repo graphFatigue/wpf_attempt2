@@ -60,3 +60,8 @@ D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\MainPage.g.cs
 D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\SinglePage.g.cs
 D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\MainPage.baml
 D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\SinglePage.baml
+D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\bin\Debug\net6.0-windows\SciChart.Charting.dll
+D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\bin\Debug\net6.0-windows\SciChart.Core.dll
+D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\bin\Debug\net6.0-windows\SciChart.Data.dll
+D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\bin\Debug\net6.0-windows\SciChart.Drawing.dll
+D:\wpf_attempt3\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\wpf_attempt2.csproj.ResolveComReference.cache

@@ -43,6 +43,37 @@
           }
         }
       },
+      "SciChart/7.0.2.27161": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/SciChart.Charting.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/SciChart.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/SciChart.Data.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/SciChart.Drawing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/SciChart.Charting.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/SciChart.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/SciChart.Data.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0-windows7.0/SciChart.Drawing.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -259,6 +290,43 @@
         "restsharp.110.2.0.nupkg.sha512",
         "restsharp.nuspec",
         "restsharp.png"
+      ]
+    },
+    "SciChart/7.0.2.27161": {
+      "sha512": "1eVPLq1qTsHwLa36B4rmpPNMKVQY8HxIjfoNP+LtHVbdGKogVJ3PyVWyvcRhzP4w2Gdc+Ckl3OZluEHVRxs4zg==",
+      "type": "package",
+      "path": "scichart/7.0.2.27161",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.txt",
+        "images/platform-app-icons_scichart-windows.png",
+        "lib/net462/SciChart.Charting.dll",
+        "lib/net462/SciChart.Charting.xml",
+        "lib/net462/SciChart.Core.dll",
+        "lib/net462/SciChart.Core.xml",
+        "lib/net462/SciChart.Data.dll",
+        "lib/net462/SciChart.Data.xml",
+        "lib/net462/SciChart.Drawing.dll",
+        "lib/net462/SciChart.Drawing.xml",
+        "lib/net6.0-windows7.0/SciChart.Charting.dll",
+        "lib/net6.0-windows7.0/SciChart.Charting.xml",
+        "lib/net6.0-windows7.0/SciChart.Core.dll",
+        "lib/net6.0-windows7.0/SciChart.Core.xml",
+        "lib/net6.0-windows7.0/SciChart.Data.dll",
+        "lib/net6.0-windows7.0/SciChart.Data.xml",
+        "lib/net6.0-windows7.0/SciChart.Drawing.dll",
+        "lib/net6.0-windows7.0/SciChart.Drawing.xml",
+        "lib/netcoreapp3.1/SciChart.Charting.dll",
+        "lib/netcoreapp3.1/SciChart.Charting.xml",
+        "lib/netcoreapp3.1/SciChart.Core.dll",
+        "lib/netcoreapp3.1/SciChart.Core.xml",
+        "lib/netcoreapp3.1/SciChart.Data.dll",
+        "lib/netcoreapp3.1/SciChart.Data.xml",
+        "lib/netcoreapp3.1/SciChart.Drawing.dll",
+        "lib/netcoreapp3.1/SciChart.Drawing.xml",
+        "scichart.7.0.2.27161.nupkg.sha512",
+        "scichart.nuspec"
       ]
     },
     "System.Configuration.ConfigurationManager/4.5.0": {
@@ -560,6 +628,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "RestSharp >= 110.2.0",
+      "SciChart >= 7.0.2.27161",
       "log4net >= 2.0.15"
     ]
   },
@@ -612,6 +681,10 @@
             "target": "Package",
             "version": "[110.2.0, )"
           },
+          "SciChart": {
+            "target": "Package",
+            "version": "[7.0.2.27161, )"
+          },
           "log4net": {
             "target": "Package",
             "version": "[2.0.15, )"
@@ -632,7 +705,7 @@
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           },
-          "Microsoft.WindowsDesktop.App.WPF": {
+          "Microsoft.WindowsDesktop.App": {
             "privateAssets": "none"
           }
         },

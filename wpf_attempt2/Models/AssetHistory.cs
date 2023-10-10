@@ -11,5 +11,15 @@ namespace wpf_attempt2.Models
         public double PriceUsd { get; set; }
 
         public long Time { get; set; }
+        public AssetHistoryScaled toAssetHistoryScaled(double HighestPriceUsd)
+        {
+            var percent = HighestPriceUsd / 100;
+            return new AssetHistoryScaled()
+            {
+                PriceUsd = this.PriceUsd,
+                Time = this.Time,
+                PriceUsdScaled = 4000 - 40*(HighestPriceUsd - PriceUsd)/percent
+            };
+        }
     }
 }

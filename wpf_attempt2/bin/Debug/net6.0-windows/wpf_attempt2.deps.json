@@ -9,6 +9,7 @@
       "wpf_attempt2/1.0.0": {
         "dependencies": {
           "RestSharp": "110.2.0",
+          "SciChart": "7.0.2.27161",
           "log4net": "2.0.15"
         },
         "runtime": {
@@ -35,6 +36,26 @@
           "lib/net6.0/RestSharp.dll": {
             "assemblyVersion": "110.2.0.0",
             "fileVersion": "110.2.0.0"
+          }
+        }
+      },
+      "SciChart/7.0.2.27161": {
+        "runtime": {
+          "lib/net6.0-windows7.0/SciChart.Charting.dll": {
+            "assemblyVersion": "7.0.2.27161",
+            "fileVersion": "7.0.2.27161"
+          },
+          "lib/net6.0-windows7.0/SciChart.Core.dll": {
+            "assemblyVersion": "7.0.2.27161",
+            "fileVersion": "7.0.2.27161"
+          },
+          "lib/net6.0-windows7.0/SciChart.Data.dll": {
+            "assemblyVersion": "7.0.2.27161",
+            "fileVersion": "7.0.2.27161"
+          },
+          "lib/net6.0-windows7.0/SciChart.Drawing.dll": {
+            "assemblyVersion": "7.0.2.27161",
+            "fileVersion": "7.0.2.27161"
           }
         }
       },
@@ -121,6 +142,13 @@
       "sha512": "sha512-FXGw0IMcqY7yO/hzS9QrD3iNswNgb9UxJnxWmfOxmGs4kRlZWqdtBoGPLuhlbgsDzX1RFo4WKui8TGGKXWKalw==",
       "path": "restsharp/110.2.0",
       "hashPath": "restsharp.110.2.0.nupkg.sha512"
+    },
+    "SciChart/7.0.2.27161": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1eVPLq1qTsHwLa36B4rmpPNMKVQY8HxIjfoNP+LtHVbdGKogVJ3PyVWyvcRhzP4w2Gdc+Ckl3OZluEHVRxs4zg==",
+      "path": "scichart/7.0.2.27161",
+      "hashPath": "scichart.7.0.2.27161.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/4.5.0": {
       "type": "package",

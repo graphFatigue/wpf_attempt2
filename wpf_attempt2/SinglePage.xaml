@@ -3,12 +3,33 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:wpf_attempt2"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SinglePage">
-
-    <Grid>
-        
-    </Grid>
+      Title="SinglePage"
+      >
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+        <Button Name="Back" Width="40" Height="40" Click="Button_Click" HorizontalAlignment="Left" Margin="20,0,0,0">
+            <Image Source="Data\back.png"></Image>
+        </Button>
+        <ListBox FontSize="2"
+                 Name="listAssetHistoryScaled"
+                 SelectionMode="Extended"
+                 Width="400"
+                 HorizontalContentAlignment="Right"
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="IsSelected" Value="False"/>
+                    <Setter Property="Height" Value="6"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Rectangle Height="4" Width="{Binding Path=PriceUsdScaled}" Margin="0" Fill="Red"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
 </Page>
