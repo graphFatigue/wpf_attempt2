@@ -8,10 +8,40 @@
       Title="SinglePage"
       >
     <StackPanel Orientation="Vertical" Background="#FFFAD1D1">
-        <Button Background="Transparent"  Name="Back" BorderThickness="0" Width="30" Height="30" Click="Button_Click" HorizontalAlignment="Left" Margin="20,10,0,0">
-            <Image Source="D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\Data\back.png"></Image>
-        </Button>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="20,10,0,10">
+            <Button Background="Transparent"  Name="Back" BorderThickness="0" Margin="0,0,300,0" Width="30" Height="30" Click="Button_Click" HorizontalAlignment="Left" >
+                <Image Source="D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\Data\back.png"></Image>
+            </Button>
+            <TextBlock Text="{Binding Path=Name}" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Rubik"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <StackPanel Background="LightBlue" Height="100" VerticalAlignment="Top" Orientation="Vertical" Margin="20,0,20,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Symbol: "/>
+                    <TextBlock Text="{Binding Path=Symbol}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Rank: "/>
+                    <TextBlock Text="{Binding Path=Rank}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Volume: "/>
+                    <TextBlock Text="{Binding Path=VolumeUsd24Hr}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Change % 24 hour: "/>
+                    <TextBlock Text="{Binding Path=ChangePercent24Hr}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Supply: "/>
+                    <TextBlock Text="{Binding Path=Supply}"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Max Supply: "/>
+                    <TextBlock Text="{Binding Path=MaxSupply}"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
             <ListBox FontSize="9"
                  Name="listAssetHistoryText"
                  SelectionMode="Extended"
@@ -75,6 +105,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </Page>

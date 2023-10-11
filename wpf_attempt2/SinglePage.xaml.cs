@@ -32,6 +32,7 @@ namespace wpf_attempt2
         {
             InitializeComponent();
             _asset = asset;
+            DataContext = _asset;
 
             try
             {
