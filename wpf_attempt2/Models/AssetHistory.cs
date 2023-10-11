@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SciChart.Core.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,9 @@ namespace wpf_attempt2.Models
             var percent = HighestPriceUsd / 100;
             return new AssetHistoryScaled()
             {
-                PriceUsd = this.PriceUsd,
+                PriceUsd = this.PriceUsd.ToString().Substring(0, PriceUsd.ToString().IndexOf(',')+6).Replace(',', '.').ToDouble(),
                 Time = this.Time,
-                PriceUsdScaled = 4000 - 40*(HighestPriceUsd - PriceUsd)/percent
+                PriceUsdScaled = 5000 - 50*(HighestPriceUsd - PriceUsd)/percent
             };
         }
     }

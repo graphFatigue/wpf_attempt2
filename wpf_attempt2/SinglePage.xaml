@@ -7,29 +7,56 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SinglePage"
       >
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+    <StackPanel Orientation="Vertical">
         <Button Name="Back" Width="40" Height="40" Click="Button_Click" HorizontalAlignment="Left" Margin="20,0,0,0">
-            <Image Source="Data\back.png"></Image>
+            <Image Source="D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\Data\back.png"></Image>
         </Button>
-        <ListBox FontSize="2"
-                 Name="listAssetHistoryScaled"
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <ListBox FontSize="7"
+                 Name="listAssetHistoryText"
                  SelectionMode="Extended"
-                 Width="400"
+                 Width="50"
                  HorizontalContentAlignment="Right"
-                 ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                 BorderThickness="0"
+                     Height="310">
+                
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Padding" Value="0"/>
                     <Setter Property="Margin" Value="0"/>
                     <Setter Property="IsSelected" Value="False"/>
-                    <Setter Property="Height" Value="6"/>
+                    <Setter Property="Height" Value="10"/>
                 </Style>
             </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Rectangle Height="4" Width="{Binding Path=PriceUsdScaled}" Margin="0" Fill="Red"/>
-                </DataTemplate>
+                        <TextBlock FontSize="7" Height="10" Text="{Binding Path=PriceUsd}">$</TextBlock>
+                    </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+            <ListBox FontSize="7"
+         Name="listAssetHistoryScaled"
+         SelectionMode="Extended"
+         Width="200"
+         HorizontalContentAlignment="Right"
+         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+         BorderThickness="0"
+         Height="310">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Margin" Value="0"/>
+                        <Setter Property="IsSelected" Value="False"/>
+                        <Setter Property="Height" Value="10"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Rectangle Height="10" Width="{Binding Path=PriceUsdScaled}" Margin="0" Fill="Red"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
     </StackPanel>
 </Page>

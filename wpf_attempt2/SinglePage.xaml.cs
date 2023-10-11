@@ -38,15 +38,16 @@ namespace wpf_attempt2
                 var apiClient = new ApiClient("https://api.coincap.io", 5000);
 
                 var assetHistory = apiClient.Get<AssetHistoryResponse>($"v2/assets/{_asset.Id}/history",
-                                                          urlParams: new Dictionary<string, string> { { "interval", "m5" } }).Data.Take(50);
+                                                          urlParams: new Dictionary<string, string> { { "interval", "m5" } }).Data;
+                assetHistory = assetHistory.Skip(assetHistory.Count() - 30);
                 var HighestPriceUsd = assetHistory.Max(assetHistory => assetHistory.PriceUsd);
                 foreach (var assetH in assetHistory)
                 {
                     _assetHistoryScaled.Add(assetH.toAssetHistoryScaled(HighestPriceUsd));
                 }
-                //listAssetHistory.ItemsSource = _assetHistory.ToList().RemoveAll(assetHist => assetHist.PriceUsd != 0).ToEnumerable().Take(50);
                 listAssetHistoryScaled.ItemsSource = _assetHistoryScaled;
                 listAssetHistoryScaled.UnselectAll(); 
+                listAssetHistoryText.ItemsSource = _assetHistoryScaled;
             }
             catch (Exception ex)
             {
