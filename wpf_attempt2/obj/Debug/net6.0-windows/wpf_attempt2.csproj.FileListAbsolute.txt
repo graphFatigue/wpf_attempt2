@@ -103,3 +103,5 @@ D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\refint\wpf_at
 D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\wpf_attempt2.pdb
 D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\wpf_attempt2.genruntimeconfig.cache
 D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\ref\wpf_attempt2.dll
+D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\ExchangePage.g.cs
+D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\obj\Debug\net6.0-windows\ExchangePage.baml

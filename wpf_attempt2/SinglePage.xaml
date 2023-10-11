@@ -41,7 +41,9 @@
                     <TextBlock Text="{Binding Path=MaxSupply}"></TextBlock>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0,0,0,5" HorizontalAlignment="Center">Currency change (last month):</TextBlock>
+                <StackPanel Orientation="Horizontal">
             <ListBox FontSize="9"
                  Name="listAssetHistoryText"
                  SelectionMode="Extended"
@@ -107,5 +109,6 @@
             </ListBox>
             </StackPanel>
         </StackPanel>
+    </StackPanel>
     </StackPanel>
 </Page>

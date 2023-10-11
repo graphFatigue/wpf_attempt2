@@ -1,0 +1,33 @@
+﻿<Page x:Class="wpf_attempt2.ExchangePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_attempt2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExchangePage">
+
+    <Grid Background="#FFFAD1D1">
+        <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal" Margin="20,10,0,50">
+                <Button Background="Transparent"  Name="Back" BorderThickness="0" Margin="0,0,300,0" Width="30" Height="30" Click="Button_Click" HorizontalAlignment="Left" >
+                    <Image Source="D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\Data\back.png"></Image>
+                </Button>
+                <TextBlock Text="{Binding Path=Name}" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Rubik"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="100">
+            <StackPanel Orientation="Horizontal" Margin="30,10,0,0" Height="100">
+                <ComboBox Name="Input" Height="25" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150"  />
+                    <TextBox Name="NumberTextBox" VerticalContentAlignment="Center" Margin="20,0,0,0" VerticalAlignment="Center" Height="25" Width="150" PreviewTextInput="NumberValidationTextBox"/>
+            </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="90,10,0,0" Height="100">
+                    <ComboBox Name="Output" Height="25" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150"  />
+                    <TextBox Name="NumberTextBoxDisabled" VerticalContentAlignment="Center" Opacity="100" IsReadOnly="True" Margin="20,0,0,0" VerticalAlignment="Center" Height="25" Width="150" PreviewTextInput="NumberValidationTextBox"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Name="Submit" Width="100" Height="40" Click="Submit_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

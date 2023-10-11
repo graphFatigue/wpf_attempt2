@@ -65,5 +65,10 @@ namespace wpf_attempt2
             var asset = row.DataContext as Asset;
             NavigationService.Navigate(new SinglePage(asset));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ExchangePage());
+        }
     }
 }
