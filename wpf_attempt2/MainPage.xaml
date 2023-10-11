@@ -9,7 +9,7 @@
       Title="MainPage">
 
     <Grid Background="#FFFAD1D1" Loaded="Grid_Loaded">
-        <DataGrid AutoGenerateColumns="False" x:Name="dgAssets" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="10" Width="547" Height="300">
+        <DataGrid AutoGenerateColumns="False" x:Name="dgAssets" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="10" Width="546" Height="405">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Rank}" IsReadOnly="True" Header="Rank" Width="180"/>
                 <DataGridTextColumn Binding="{Binding Path=Name}" IsReadOnly="True" Header="Name" Width="180"/>
@@ -17,7 +17,15 @@
             </DataGrid.Columns>
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
+                    <Setter Property="Height" Value="25"/>
+                    <Setter Property="BorderThickness" Value="0"/>
                     <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="Black" />
+                            <Setter Property="Background" Value="LightPink" />
+                        </Trigger>
+                    </Style.Triggers>
                 </Style>
             </DataGrid.Resources>
         </DataGrid>

@@ -19,7 +19,7 @@ namespace wpf_attempt2.Models
             {
                 PriceUsd = this.PriceUsd.ToString().Substring(0, PriceUsd.ToString().IndexOf(',')+6).Replace(',', '.').ToDouble(),
                 Time = this.Time,
-                PriceUsdScaled = 5000 - 50*(HighestPriceUsd - PriceUsd)/percent
+                PriceUsdScaled = 500 - 5*(HighestPriceUsd - PriceUsd)/percent
             };
         }
     }

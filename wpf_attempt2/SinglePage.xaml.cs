@@ -38,7 +38,7 @@ namespace wpf_attempt2
                 var apiClient = new ApiClient("https://api.coincap.io", 5000);
 
                 var assetHistory = apiClient.Get<AssetHistoryResponse>($"v2/assets/{_asset.Id}/history",
-                                                          urlParams: new Dictionary<string, string> { { "interval", "m5" } }).Data;
+                                                          urlParams: new Dictionary<string, string> { { "interval", "d1" } }).Data;
                 assetHistory = assetHistory.Skip(assetHistory.Count() - 30);
                 var HighestPriceUsd = assetHistory.Max(assetHistory => assetHistory.PriceUsd);
                 foreach (var assetH in assetHistory)
