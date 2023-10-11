@@ -5,12 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:wpf_attempt2"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="800"
       Title="MainPage">
 
-    <StackPanel Background="#FFFAD1D1" Orientation="Horizontal">
-        <Grid Background="#FFFAD1D1" Loaded="Grid_Loaded">
-            <DataGrid AutoGenerateColumns="False" x:Name="dgAssets" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="10" Width="546" Height="405">
+    <StackPanel Width="800" HorizontalAlignment="Center" Background="#FFFAD1D1" Orientation="Horizontal">
+        <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Background="#FFFAD1D1" Loaded="Grid_Loaded">
+            <StackPanel Orientation="Horizontal" Width="600">
+                <TextBox x:Name="textBox1" Width="150" Height="22" Margin="80,20,265,10" HorizontalAlignment="Center" VerticalAlignment="Top" KeyUp="textBox1_KeyUp" />
+                <Button Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,0,10" Height="40" Click="Button_Click"/>
+            </StackPanel>
+            <DataGrid AutoGenerateColumns="False" x:Name="dgAssets" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="120,20,10,40" Width="546" Height="405">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path=Rank}" IsReadOnly="True" Header="Rank" Width="180"/>
                     <DataGridTextColumn Binding="{Binding Path=Name}" IsReadOnly="True" Header="Name" Width="180"/>
@@ -30,8 +34,7 @@
                     </Style>
                 </DataGrid.Resources>
             </DataGrid>
-
-        </Grid>
-        <Button Width="40" Height="40" Click="Button_Click"/>
+        </StackPanel>
+        
     </StackPanel>
 </Page>

@@ -70,5 +70,13 @@ namespace wpf_attempt2
         {
             NavigationService.Navigate(new ExchangePage());
         }
+
+        private void textBox1_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            var filtered = _assets.Where(asset => asset.Name.ToLower().Contains(textBox1.Text.ToLower()));
+            dgAssets.Height = filtered.Count() * 25 + 40;
+
+            dgAssets.ItemsSource = filtered;
+        }
     }
 }
