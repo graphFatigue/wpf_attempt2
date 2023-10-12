@@ -10,7 +10,7 @@
 
     <StackPanel Height="650" Width="800" HorizontalAlignment="Center" Background="#FFFAD1D1" Orientation="Horizontal">
         <StackPanel HorizontalAlignment="Center" Margin="25,20,0,0" Orientation="Vertical" Background="#FFFAD1D1" Loaded="Grid_Loaded">
-            <TextBlock Text="TOP-15 CRYPTOCURRENCY" Margin="70,0,0,0" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="Rubik"/>
+            <TextBlock Text="TOP-15 CRYPTOCURRENCIES" Margin="70,0,0,0" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="Rubik"/>
             <StackPanel Orientation="Horizontal" Margin="80,0,0,0" Width="600">
                 <TextBlock Margin="45,22,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">Search by Name</TextBlock>
                 <TextBox x:Name="textBox1" VerticalContentAlignment="Center" Width="150" Height="22" Margin="5,20,180,10" HorizontalAlignment="Center" VerticalAlignment="Top" KeyUp="textBox1_KeyUp" />
