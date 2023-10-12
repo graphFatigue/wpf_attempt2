@@ -60,7 +60,7 @@ namespace wpf_attempt2.API.Implementations
             if (!response.IsSuccessful)
             {
                 logger.Error($"Action: {method} - Resource: {resourceUrl} - Response Status Code: {response.StatusCode} - Response Content: {response.Content}");
-                throw new BadGatewayException($"Ha ocurrido un error al interactuar con el recurso {method} - {resourceUrl}");
+                throw new BadGatewayException($"An error occurred when interacting with the resource {method} - {resourceUrl}");
             }
 
             return response.Data != null ? response.Data : new T();

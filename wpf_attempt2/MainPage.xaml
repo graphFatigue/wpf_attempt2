@@ -20,7 +20,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path=Rank}" IsReadOnly="True" Header="Rank" Width="180"/>
                     <DataGridTextColumn Binding="{Binding Path=Name}" IsReadOnly="True" Header="Name" Width="180"/>
-                    <DataGridTextColumn Binding="{Binding Path=PriceUsd}" IsReadOnly="True" Header="Price in Usd" Width="180"/>
+                    <DataGridTextColumn Binding="{Binding Path=PriceUsd}" IsReadOnly="True" Header="Price in USD" Width="180"/>
                 </DataGrid.Columns>
                 <DataGrid.Resources>
                     <Style TargetType="DataGridRow">
