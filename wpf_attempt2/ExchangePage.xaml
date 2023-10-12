@@ -10,23 +10,37 @@
 
     <Grid Background="#FFFAD1D1">
         <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+            
             <StackPanel Orientation="Horizontal" Margin="20,10,0,50">
-                <Button Background="Transparent"  Name="Back" BorderThickness="0" Margin="0,0,300,0" Width="30" Height="30" Click="Button_Click" HorizontalAlignment="Left" >
+                <Button Background="Transparent"  Name="Back" BorderThickness="0" Margin="0,0,150,0" Width="30" Height="30" Click="Button_Click" HorizontalAlignment="Left" >
                     <Image Source="D:\wpf_attempt4\wpf_attempt2\wpf_attempt2\Data\back.png"></Image>
                 </Button>
-                <TextBlock Text="{Binding Path=Name}" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Rubik"/>
+                <TextBlock Text="CRYPTOCURRENCY EXCHANGE" Margin="0,30,0,0" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="Rubik"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="100">
-            <StackPanel Orientation="Horizontal" Margin="30,10,0,0" Height="100">
-                <ComboBox Name="Input" Height="25" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150"  />
-                    <TextBox Name="NumberTextBox" VerticalContentAlignment="Center" Margin="20,0,0,0" VerticalAlignment="Center" Height="25" Width="150" PreviewTextInput="NumberValidationTextBox"/>
-            </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="90,10,0,0" Height="100">
-                    <ComboBox Name="Output" Height="25" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150"  />
-                    <TextBox Name="NumberTextBoxDisabled" VerticalContentAlignment="Center" Opacity="100" IsReadOnly="True" Margin="20,0,0,0" VerticalAlignment="Center" Height="25" Width="150" PreviewTextInput="NumberValidationTextBox"/>
+                <StackPanel Orientation="Horizontal" Margin="30,0,0,0" Height="100">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="0,22,0,5" VerticalAlignment="Top" HorizontalAlignment="Left">Choose the first currency:</TextBlock>
+                        <ComboBox Name="Input" Height="25" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" Width="150"  />
+                    </StackPanel>
+                    <StackPanel Margin="20,0,0,0" Orientation="Vertical">
+                        <TextBlock Margin="0,22,0,5" VerticalAlignment="Top" HorizontalAlignment="Left">Input value:</TextBlock>
+                        <TextBox Name="NumberTextBox" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="25" Width="150" PreviewTextInput="NumberValidationTextBox"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="90,0,0,0" Height="100">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="0,22,0,5" VerticalAlignment="Top" HorizontalAlignment="Left">Choose the second currency:</TextBlock>
+                        <ComboBox Name="Output" Height="25" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" Width="150"  />
+                    </StackPanel>
+                    <StackPanel Margin="20,0,0,0" Orientation="Vertical">
+                        <TextBlock Margin="0,22,0,5" VerticalAlignment="Top" HorizontalAlignment="Left">Result:</TextBlock>
+                        <TextBox Name="NumberTextBoxDisabled" HorizontalAlignment="Left" VerticalContentAlignment="Center" Opacity="100" IsReadOnly="True" Margin="0,0,0,0" VerticalAlignment="Center" Height="25" Width="150" PreviewTextInput="NumberValidationTextBox"/>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
-            <Button Name="Submit" Width="100" Height="40" Click="Submit_Click"/>
+            <Button Name="Submit" Content="Exchange" Margin="0,40,0,0" Background="LightBlue" FontSize="20" Width="100" Height="40" Click="Submit_Click"/>
+            <TextBlock Foreground="Red" Name="TextControl"  Visibility="Hidden" HorizontalAlignment="Center" Text="Please fill the form first"/>
         </StackPanel>
 
     </Grid>

@@ -47,10 +47,23 @@ namespace wpf_attempt2
         {
             if (Input.Text!= string.Empty && Output.Text!=string.Empty && NumberTextBox.Text!= string.Empty)
             {
+                TextControl.Visibility = Visibility.Hidden;
                 var selectedInput = Input.SelectedItem as Asset;
                 var selectedOutput = Output.SelectedItem as Asset;
                 var quantity = Int32.Parse(NumberTextBox.Text);
-                NumberTextBoxDisabled.Text = (selectedInput?.PriceUsd*quantity/selectedOutput?.PriceUsd).ToString().Substring(0, (selectedInput?.PriceUsd * quantity / selectedOutput?.PriceUsd).ToString().IndexOf(',')+6);
+                var selectedInputString = (selectedInput?.PriceUsd * quantity / selectedOutput?.PriceUsd).ToString();
+                if (selectedInputString.Length >= selectedInputString.ToString().IndexOf(',') + 6) {
+                    NumberTextBoxDisabled.Text = selectedInputString.Substring(0, selectedInputString.ToString().IndexOf(',') + 6);
+                }
+                else
+                {
+                    NumberTextBoxDisabled.Text = selectedInputString;
+                }
+                
+            }
+            else
+            {
+                TextControl.Visibility = Visibility.Visible;
             }
         }
 
